@@ -8,4 +8,4 @@ Bootstrap Framework
 
 Preferred browser: Firefox
 
-Unity WebGL is not supported in mobile devices.
+Unity WebGL is not supported on mobile devices.
