@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class RandomGen : MonoBehaviour {
-
+	//the array contains the list of positions the dragon can be placed when the game is played.
 	float[] randPos = new float[] { 84.42f, 146.78f, 196.78f, 312.13f, 369.3f };
 	Vector3 pos;
 	public GameObject[] visibleList;
@@ -18,7 +18,7 @@ public class RandomGen : MonoBehaviour {
 		pos = new Vector3(x, y, z);
 		transform.position = pos;
 		int _p = (int)x;
-		switch(_p)
+		switch(_p)	//dending on the dragons positon, set animals/bones invisible/visible
 		{
 			case 84: // all animal invisible
 				visibleList = GameObject.FindGameObjectsWithTag ("animals_5");
@@ -56,7 +56,7 @@ public class RandomGen : MonoBehaviour {
 				setRender(visibleList3);
 				setRender(visibleList4);
 				break;
-			case 312: //make animals invisible
+			case 312:
 				visibleList = GameObject.FindGameObjectsWithTag ("animals_1");
 				visibleList1 = GameObject.FindGameObjectsWithTag ("skull_3");
 				visibleList2 = GameObject.FindGameObjectsWithTag ("skull_4");
@@ -68,7 +68,7 @@ public class RandomGen : MonoBehaviour {
 				setRender(visibleList3);
 				setRender(visibleList4);
 				break;
-			default:	//
+			default:	//all bones invisible
 				visibleList = GameObject.FindGameObjectsWithTag ("skull_2");
 				visibleList1 = GameObject.FindGameObjectsWithTag ("skull_3");
 				visibleList2 = GameObject.FindGameObjectsWithTag ("skull_4");
@@ -88,8 +88,7 @@ public class RandomGen : MonoBehaviour {
 			child.GetComponentInChildren<Renderer>().enabled=false;
 		}
 	}
-	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }

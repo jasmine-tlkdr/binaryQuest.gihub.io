@@ -11,10 +11,10 @@ function Start()
 	loser.gameObject.SetActive(false);
 }
 
-function damage()
+function damage()	//reduce player's health
 {
 	var calcHealth:float;
-	if(curr_health > 5){
+	if(curr_health > 5){	// if player's current health is greater than 5
 		curr_health -= 5f;
 		calcHealth = curr_health / full_health;
 		adjustHealthBar (calcHealth);
